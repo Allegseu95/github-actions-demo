@@ -8,6 +8,8 @@ WORKDIR /app
 COPY package.json ./
 
 # Instalar las dependencias de la aplicación
+RUN npm install -g @nestjs/cli
+
 RUN npm install --production
 
 # Copiar el código fuente de la aplicación al contenedor
